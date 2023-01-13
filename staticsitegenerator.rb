@@ -11,4 +11,12 @@ class Staticsitegenerator < Formula
     system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
+  def caveats
+    <<~EOS
+      Add the following in your ~/.zshrc or ~/.profile:
+  
+        alias ssg=staticsitegenerator
+    EOS
+  end
+
 end
